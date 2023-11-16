@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>API Documentation</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <header>API Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#endpoint_usage">Endpoint Usage</a></li>
+            <li><a class="nav-link" href="#error_handling">Error Handling</a></li>
+            <li><a class="nav-link" href="#authentication">Authentication</a></li>
+            <li><a class="nav-link" href="#response_codes">Response Codes</a></li>
+            <li><a class="nav-link" href="#reference">Reference</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN SECTION -->
+    <main id="main-doc">
+
+        <!-- SECTION ONE - Introduction -->
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <article>
+                <p>Welcome to the API Documentation for AwesomeAPI!</p>
+                <p>This API provides developers with access to a variety of features for building amazing applications.</p>
+                <code>https://api.awesomeapi.com/v1</code>
+                <p>Explore the documentation to learn how to integrate our services into your projects.</p>
+            </article>
+        </section>
+
+        <!-- SECTION TWO - Endpoint Usage -->
+        <section class="main-section" id="endpoint_usage">
+            <header>Endpoint Usage</header>
+            <article>
+                <p>To make requests to the API, use the following endpoints:</p>
+                <code>GET /users</code>
+                <p>Retrieve a list of users.</p>
+                <ul>
+                    <li>Parameters:
+                        <ul>
+                            <li><code>page</code> - Page number</li>
+                            <li><code>limit</code> - Number of items per page</li>
+                        </ul>
+                    </li>
+                    <li>Example request: <code>https://api.awesomeapi.com/v1/users?page=1&limit=10</code></li>
+                    <li>Example response:
+                        <pre>
+{
+  "users": [
+    {"id": 1, "name": "John Doe"},
+    {"id": 2, "name": "Jane Smith"}
+  ]
+}
+                        </pre>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION THREE - Error Handling -->
+        <section class="main-section" id="error_handling">
+            <header>Error Handling</header>
+            <article>
+                <p>If an error occurs, the API will respond with a JSON object containing details about the error.</p>
+                <code>HTTP 404 Not Found</code>
+                <ul>
+                    <li>Example response:
+                        <pre>
+{
+  "error": {
+    "code": 404,
+    "message": "Resource not found"
+  }
+}
+                        </pre>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION FOUR - Authentication -->
+        <section class="main-section" id="authentication">
+            <header>Authentication</header>
+            <article>
+                <p>The API uses token-based authentication. Include your API key in the request headers:</p>
+                <code>Authorization: Bearer YOUR_API_KEY</code>
+                <p>Replace <code>YOUR_API_KEY</code> with your actual API key.</p>
+            </article>
+        </section>
+
+        <!-- SECTION FIVE - Response Codes -->
+        <section class="main-section" id="response_codes">
+            <header>Response Codes</header>
+            <article>
+                <p>The API returns various HTTP status codes to indicate the success or failure of a request:</p>
+                <ul>
+                    <li><code>200 OK</code> - The request was successful</li>
+                    <li><code>400 Bad Request</code> - The request was malformed or invalid</li>
+                    <li><code>401 Unauthorized</code> - Authentication failed or missing credentials</li>
+                    <li><code>404 Not Found</code> - The requested resource was not found</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION SIX - Reference -->
+        <section class="main-section" id="reference">
+            <header>Reference</header>
+            <article>
+                <p>This API and its documentation are fictional and created for illustrative purposes only. The URLs,
+                    endpoints, and details provided are placeholders and do not represent a real API.</p>
+            </article>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
