@@ -1,3 +1,9 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
 html,
 body {
     min-width: 190px;
@@ -29,7 +35,6 @@ header {
 
 code {
     background-color: #f4f4f4;
-    padding: 2px 5px;
     font-family: "Courier New", monospace;
     padding: 6px 12px;
 }
@@ -53,7 +58,7 @@ nav {
 #navbar header {
     font-size: 20px;
     text-align: center;
-    margin: 30px 0;
+    margin: 10px 0;
 }
 
 #navbar ul {
@@ -64,14 +69,14 @@ nav {
 }
 
 #navbar li {
-    border-top: 1px solid;
+    border-top: 1px solid #555;
     list-style: none;
     position: relative;
     width: 100%;
 }
 
 #navbar li:last-child {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #555;
 }
 
 .nav-link {
@@ -94,17 +99,67 @@ nav {
 }
 
 /* Media Query for Responsive Design */
+@media (max-width: 815px) {
 
-/* @media screen and (max-width: 768px) {
     #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         height: auto;
-        position: static;
-        flex-direction: row;
-        justify-content: space-around;
+        border: none;
+        z-index: 1;
+        min-height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #333;
+    }
+
+    #navbar header {
+        text-align: center;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    #navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #navbar li {
+        border-right: 1px solid #555;
+        margin: 0;
+        box-sizing: border-box;
+        flex: 1 1 33%;
+    }
+
+    #navbar li:last-child {
+        border-right: none;
     }
 
     #main-doc {
-        margin: 20px;
+        margin-left: 0;
+        margin-top: 140px;
+        padding: 20px;
     }
-} */
+}
+
+@media (max-width: 600px) {
+
+    #navbar li {
+        flex: 1 1 50%;
+    }
+
+    #main-doc {
+        margin-top: 190px;
+    }
+}
